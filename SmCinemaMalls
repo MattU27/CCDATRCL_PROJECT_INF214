@@ -5,9 +5,14 @@ import java.util.LinkedList;
 public class SmCinemaMalls{
 
     public static void main(String args[]){
-    System.out.println("============================");
-    System.out.println("WELCOME TO SM CINEMA MALLS!! ");
-    System.out.println("============================");
+    System.out.println("================================");
+    System.out.println(" WELCOME TO SM CINEMA MALLS!!!! ");
+    System.out.println("    NOW SHOWING MOVIES!!!");
+    System.out.println("  Black Adam  | Creep Nation ");
+    System.out.println("  Smile       | The Sadness ");
+    System.out.println("  Murder House| Speak No Evil ");
+    System.out.println("  She said    | The Menu ");
+    System.out.println("================================");
 
         try (Scanner x = new Scanner (System.in)) {
             String m, s;
@@ -15,6 +20,11 @@ public class SmCinemaMalls{
 
             Queue <String> movies = new LinkedList<>();
             Queue <String> snacks = new LinkedList<>();
+
+            
+        
+
+
 
             for(int i = 1; i <= 4; i++){
                 System.out.print("Choose a movies to watch: " + i + " of 4 : ");
@@ -24,6 +34,11 @@ public class SmCinemaMalls{
             }
             System.out.println("===============================");
             System.out.println("Welcome to the snack stations!!");
+            System.out.println("       SNACKS AVAILABLE");
+            System.out.println("      Popcorn | Fries");
+            System.out.println("      Candies | Mini-Donuts");
+            System.out.println("      HotDogs | Juice");
+            System.out.println("      Burger  | Nachos");
             System.out.println("===============================");
             for(int i = 1; i <= 6; i++){
                 System.out.print("Enter Snacks to bring " + i + " of 6 : ");
