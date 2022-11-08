@@ -1,0 +1,60 @@
+import java.util.Queue;
+import java.util.Scanner;
+import java.util.LinkedList;
+
+public class SmCinemaMalls{
+
+    public static void main(String args[]){
+    System.out.println("============================");
+    System.out.println("WELCOME TO SM CINEMA MALLS!! ");
+    System.out.println("============================");
+
+        try (Scanner x = new Scanner (System.in)) {
+            String m, s;
+            char eats;
+
+            Queue <String> movies = new LinkedList<>();
+            Queue <String> snacks = new LinkedList<>();
+
+            for(int i = 1; i <= 4; i++){
+                System.out.print("Choose a movies to watch: " + i + " of 4 : ");
+                m = x.nextLine();
+                movies.offer(m);
+
+            }
+            System.out.println("===============================");
+            System.out.println("Welcome to the snack stations!!");
+            System.out.println("===============================");
+            for(int i = 1; i <= 6; i++){
+                System.out.print("Enter Snacks to bring " + i + " of 6 : ");
+                s = x.nextLine();
+                snacks.offer(s);
+            }
+
+            
+            System.out.println("=================================");
+            System.out.println("Here are your movies and snacks!!");
+            System.out.println("=================================");
+            System.out.println("Movies to watch are : (" + movies + ")" ); 
+            System.out.println("Snacks to eat are : (" + snacks + ")" ); 
+
+            System.out.print("Type Y each time you finish a snack: ");
+            do{
+                eats = x.next().charAt(0);
+                if(eats == 'Y'){
+                    snacks.poll();
+                if(snacks.isEmpty()){
+                    System.out.println("No more snacks available");
+                    break;
+                    }
+                }
+                System.out.println("Your snacks: ("+ snacks +")");
+            } while(eats == 'Y');
+
+
+            System.out.println("=======================================");
+            System.out.println("Hope you enjoy your movies and snacks!!");
+            System.out.println("=======================================");
+        }
+    }
+}
