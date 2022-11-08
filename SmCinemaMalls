@@ -21,11 +21,6 @@ public class SmCinemaMalls{
             Queue <String> movies = new LinkedList<>();
             Queue <String> snacks = new LinkedList<>();
 
-            
-        
-
-
-
             for(int i = 1; i <= 4; i++){
                 System.out.print("Choose a movies to watch: " + i + " of 4 : ");
                 m = x.nextLine();
